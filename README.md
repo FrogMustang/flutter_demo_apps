@@ -1,16 +1,41 @@
 # flutter_demo_apps
 
-A new Flutter project.
+This is a repo to showcase some basic demo apps I've done and the published apps I've worked on as a Flutter developer.
 
-## Getting Started
+## Published apps I've worked on:
+### Evenito check-in app
+https://play.google.com/store/apps/details?id=com.evenito.checkin
 
-This project is a starting point for a Flutter application.
+https://apps.apple.com/sa/app/check-in-guestlist-evenito/id1572822238
 
-A few resources to get you started if this is your first Flutter project:
+### Binaris 1001
+https://play.google.com/store/apps/details?id=com.mjk.rigy.binary
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+https://apps.apple.com/us/app/binaris-1001/id1512633108
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Ozonvicc
+https://play.google.com/store/apps/details?id=com.mjk.rigy.jokes&hl=en&gl=US
+
+https://apps.apple.com/ro/app/%C3%B6z%C3%B6nvicc/id1479397425
+
+For this one I had to come up with a new design. Here are some samples
+
+<img src="https://user-images.githubusercontent.com/56998879/224573471-890a2e55-16d6-40d7-84b3-fc4aa48005dd.jpg">
+<img src="https://user-images.githubusercontent.com/56998879/224573472-eb964326-6f48-499e-b4f9-424ba5461c00.jpg">
+
+
+# Can't build the project?
+If you don't have the environment to run the code, here is a video and some screenshots of what it looks like:
+
+## Video
+https://youtu.be/nHoCVeA95nU
+
+
+### Screenshots
+<img src="https://user-images.githubusercontent.com/56998879/224572026-f9db761b-0e2f-4374-aa02-6b4bc5e88092.jpg" width="300">
+
+
+<img src="https://user-images.githubusercontent.com/56998879/224572027-a025e0be-2b25-4cf8-84c9-30ff04ae3779.jpg" width="300"><img src="https://user-images.githubusercontent.com/56998879/224572028-5e46e511-9d5c-40c5-988d-652d9c333a2e.jpg" width="300"><img src="https://user-images.githubusercontent.com/56998879/224572029-063c9e95-0892-4b3d-97ea-c64fd9fb751e.jpg" width="300">
+
+
+<img src="https://user-images.githubusercontent.com/56998879/224572031-f5856246-3615-4d83-8e27-641b4f195fe3.jpg" width="300"><img src="https://user-images.githubusercontent.com/56998879/224574204-07051ac3-f7eb-4b21-b964-ee7df7ca0f2b.jpg" width="300"><img src="https://user-images.githubusercontent.com/56998879/224572032-3aa3dad0-99ab-4ad4-bef1-351bfbb687a2.jpg" width="300">
