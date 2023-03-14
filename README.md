@@ -39,3 +39,39 @@ https://youtu.be/nHoCVeA95nU
 
 
 <img src="https://user-images.githubusercontent.com/56998879/224572031-f5856246-3615-4d83-8e27-641b4f195fe3.jpg" width="300"><img src="https://user-images.githubusercontent.com/56998879/224574204-07051ac3-f7eb-4b21-b964-ee7df7ca0f2b.jpg" width="300"><img src="https://user-images.githubusercontent.com/56998879/224572032-3aa3dad0-99ab-4ad4-bef1-351bfbb687a2.jpg" width="300">
+
+## Things I've done in Flutter
+- state management (provider, riverpod, bloc)
+- navigaion with GoRouter
+- localization (multiple languages for same app)
+- basic animations and complex layouts
+- testing (mocking, integration tests, UI test)
+- rest API, GraphQl, Protobuf with gRPC, pub-sub with mqtt and stomp
+- QR code scanner
+- Firebase authentication (phone with SMS verification code, Google, Apple, email and pass)
+- Google Maps API
+- payment method integration (Stripe)
+- local DB storage (SQLite)
+- publish apps to Google Play and App Store
+
+### Evenito check-in guests app
+- add support for offline functionality by storing the data locally in SQLite
+- improve performance to prolong battery life
+
+### Binaris puzzle game
+- fixed restore purchases
+- added support for cloud progress sync to Firestore with account login (Google, Apple or e-mail), register and reset password
+
+### Hyve personal finance app
+- built a lot of complex screens and features from scratch with GraphQL integration, Riverpod state management, a lot of forms, pie chrats etc.
+
+### Spare food delivery app
+- client (login, profile, adding cards, address, looking through menus, search bars with live update)
+- restaurant (add drivers, receive orders, accept/decline them, assign drivers to deliver them)
+
+### dating app
+- login with phone and SMS code verification
+- user profile with picture, description etc.
+- finding friends with live search bar
+- sending friend requests, accepting them with pub - sub
+- live chat messaging with timestamps and read receipts.
