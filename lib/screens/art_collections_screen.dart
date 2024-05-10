@@ -12,7 +12,7 @@ import 'package:flutter_sticky_header/flutter_sticky_header.dart';
 import 'package:provider/provider.dart';
 
 class CollectionsScreen extends StatefulWidget {
-  const CollectionsScreen({Key? key}) : super(key: key);
+  const CollectionsScreen({super.key});
 
   @override
   State<CollectionsScreen> createState() => _CollectionsScreenState();
@@ -78,7 +78,6 @@ class _CollectionsScreenState extends State<CollectionsScreen> {
     _paintings = context.watch<ArtObjectsProvider>().paintings;
 
     return Scaffold(
-      // backgroundColor: Colors.black,
       body: SafeArea(
         child: SizedBox(
           height: _screenSize!.height,
@@ -91,6 +90,21 @@ class _CollectionsScreenState extends State<CollectionsScreen> {
               SliverAppBar(
                 key: const Key("sliverAppBar"),
                 pinned: true,
+                automaticallyImplyLeading: false,
+                actions: [
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: const Padding(
+                      padding: EdgeInsets.only(right: 15),
+                      child: Icon(
+                        Icons.close,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ),
+                ],
                 backgroundColor: Colors.white,
                 expandedHeight: _screenSize!.height * 0.4,
                 collapsedHeight: 60,
@@ -236,7 +250,7 @@ class _CollectionsScreenState extends State<CollectionsScreen> {
 }
 
 class HomeScreenPlaceHolder extends StatelessWidget {
-  const HomeScreenPlaceHolder({Key? key}) : super(key: key);
+  const HomeScreenPlaceHolder({super.key});
 
   @override
   Widget build(BuildContext context) {

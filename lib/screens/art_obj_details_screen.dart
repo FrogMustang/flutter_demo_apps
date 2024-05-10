@@ -9,9 +9,9 @@ class DetailsScreen extends StatefulWidget {
   final ArtObject artObject;
 
   const DetailsScreen({
-    Key? key,
+    super.key,
     required this.artObject,
-  }) : super(key: key);
+  });
 
   @override
   State<DetailsScreen> createState() => _DetailsScreenState();
@@ -252,7 +252,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
 class DetailsScreenPlaceholder extends StatelessWidget {
   final ArtObject obj;
 
-  const DetailsScreenPlaceholder(this.obj, {Key? key}) : super(key: key);
+  const DetailsScreenPlaceholder(this.obj, {super.key});
 
   @override
   Widget build(BuildContext context) {

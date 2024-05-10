@@ -8,9 +8,8 @@ For a detailed list of apps and features I've worked on, please check out my [Li
 # Can't build the project?
 If you don't have the environment to run the code, here is a video and some screenshots of what it looks like:
 
-## Video
+### Video
 https://youtu.be/nHoCVeA95nU
-
 
 ### Screenshots
 <img src="https://user-images.githubusercontent.com/56998879/224572026-f9db761b-0e2f-4374-aa02-6b4bc5e88092.jpg" width="300">

@@ -3,7 +3,7 @@ import 'package:flutter_demo_apps/utils/Utils.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TicTacToeScreen extends StatefulWidget {
-  const TicTacToeScreen({Key? key}) : super(key: key);
+  const TicTacToeScreen({super.key});
 
   @override
   State<TicTacToeScreen> createState() => _TicTacToeScreenState();
