@@ -1,11 +1,13 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:easy_rich_text/easy_rich_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_demo_apps/utils/Utils.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class InfiniteScrollScreen extends StatefulWidget {
-  const InfiniteScrollScreen({Key? key}) : super(key: key);
+  const InfiniteScrollScreen({super.key});
 
   @override
   State<InfiniteScrollScreen> createState() => _InfiniteScrollScreenState();
@@ -162,19 +164,23 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
           ),
 
           /// SLIDE TITLE
-          ClipRRect(
-            borderRadius: BorderRadius.only(
-              bottomLeft: Radius.circular(16.sp),
-              bottomRight: Radius.circular(16.sp),
-            ),
+          Expanded(
             child: Container(
-              height: 30.h,
               width: 162.w,
-              color: const Color.fromRGBO(48, 48, 54, 1),
-              child: Center(
-                child: Text(
-                  slide.title,
-                  style: Theme.of(context).textTheme.bodySmall,
+              decoration: BoxDecoration(
+                color: const Color.fromRGBO(48, 48, 54, 1),
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(16.sp),
+                  bottomRight: Radius.circular(16.sp),
+                ),
+              ),
+              child: Expanded(
+                child: Center(
+                  child: AutoSizeText(
+                    slide.title,
+                    style: Theme.of(context).textTheme.bodySmall,
+                    minFontSize: 8,
+                  ),
                 ),
               ),
             ),
@@ -193,22 +199,30 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
           style: Theme.of(context).textTheme.headlineMedium,
         ),
 
-        /// CALL TO ACTION SUBTITLE
-        Text.rich(
-          TextSpan(
-            children: [
-              TextSpan(
-                text: "Cancel Anytime, ",
-                style: Theme.of(context).textTheme.titleMedium,
-              ),
-              TextSpan(
-                text: "We'll still love you.",
-                style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                      color: Colors.white.withOpacity(0.7),
-                    ),
-              ),
-            ],
-          ),
+        EasyRichText(
+          "Cancel Anytime, *We'll still love you.*",
+          defaultStyle: Theme.of(context).textTheme.titleMedium,
+          textAlign: TextAlign.center,
+          maxLines: 2,
+          overflow: TextOverflow.ellipsis,
+          patternList: [
+            EasyRichTextPattern(
+              // matches anything that is between *
+              // (e.g. This is *matched* but this is not)
+              targetString: '(\\*)(.*?)(\\*)',
+              matchBuilder: (
+                BuildContext context,
+                RegExpMatch? match,
+              ) {
+                return TextSpan(
+                  text: match?[0]?.replaceAll('*', ''),
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                        color: Colors.white.withOpacity(0.7),
+                      ),
+                );
+              },
+            ),
+          ],
         ),
       ],
     );
@@ -230,14 +244,20 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                _switchValue ? "Free Trial Enabled" : "Not sure yet?",
-                style: Theme.of(context).textTheme.titleSmall,
+              Flexible(
+                child: AutoSizeText(
+                  _switchValue ? "Free Trial Enabled" : "Not sure yet?",
+                  style: Theme.of(context).textTheme.titleSmall,
+                  maxLines: 1,
+                ),
               ),
               !_switchValue
-                  ? Text(
-                      "Enable free trial",
-                      style: Theme.of(context).textTheme.bodyMedium,
+                  ? Flexible(
+                      child: AutoSizeText(
+                        "Enable free trial",
+                        style: Theme.of(context).textTheme.bodyMedium,
+                        maxLines: 1,
+                      ),
                     )
                   : const SizedBox(),
             ],

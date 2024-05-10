@@ -50,7 +50,7 @@ class MuseumRepository {
 
     /// if something fails
     if (response.statusCode != 200) {
-      debugPrint("REASON PHRASE: " + response.reasonPhrase!);
+      debugPrint("REASON PHRASE: ${response.reasonPhrase!}");
 
       /// if something fails, throw it up the chain
       /// and handle it in the UI code where the first call is made

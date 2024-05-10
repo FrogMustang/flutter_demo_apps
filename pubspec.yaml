@@ -34,21 +34,23 @@ dependencies:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.5
+  cupertino_icons: ^1.0.8
 
   carousel_slider: ^4.2.1
   auto_size_text: ^3.0.0 # nicely display long text
-  cached_network_image: ^3.2.3 # optimize network images
+  cached_network_image: ^3.3.1 # optimize network images
   flutter_sticky_header: ^0.6.5 # list with headers
-  fluttertoast: ^8.2.1  # display error messages
+  fluttertoast: ^8.2.5  # display error messages
 
-  flutter_screenutil: ^5.7.0 # make responsive pixel perfect layout
+  flutter_screenutil: ^5.9.0 # make responsive pixel perfect layout
 
   equatable: 
 
-  http: ^0.13.5 # make http calls to API
+  http: ^1.2.1 # make http calls to API
 
-  provider: ^6.0.5 # state management
+  provider: ^6.1.2 # state management
+
+  easy_rich_text: ^2.1.0
 
 dev_dependencies:
   flutter_test:
@@ -59,7 +61,7 @@ dev_dependencies:
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^2.0.1
+  flutter_lints: ^3.0.2
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
